@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }}</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="movie-header">
+            <h1>{{ movie.title }}</h1>
+            <p><strong>Overview:</strong> {{ movie.overview }}</p>
+            <p><strong>Release date:</strong> {{ movie.release_date }}</p>
+            <p><strong>Budget:</strong> {{ movie.budget }}</p>
+            <p><strong>Revenue:</strong> {{ movie.revenue }}</p>
+            <p><strong>Runtime:</strong> {{ movie.runtime }} minutes</p>
+            <p><strong>Vote Average</strong> {{ movie.vote_average }}</p>
+            <p><strong>Vote Count:</strong> {{ movie.vote_count }}</p>
+            <p><strong>Production Countries:</strong></p>
+            <ul>
+                {% for country in movie.production_countries %}
+                    <li>{{ country }}</li>
+                {% endfor %}
+            </ul>            
+            <p><strong>Genres:</strong></p>
+            <ul>
+                {% for genre in movie.genres %}
+                    <li>{{ genre }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="recommendations">
+            <h2>Recommendations</h2>
+            <ul>
+                {% for rec in movie.recommendations %}
+                    <li>
+                        <strong>{{ rec.name }}</strong> 
+                        - <a href="{{ rec.wUrl }}" target="_blank">Wiikipedia</a> 
+                        - <a href="https://www.youtube.com/watch?v={{ rec.yID }}" target="_blank">Watch on YouTube</a> 
+                        <br>
+                        <p>{{ rec.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <p>Total Results: {{ response.results_count }}</p>
+    {% if response.best_movie %}
+        <h2>Best Rated Movie:</h2>
+        <p>Title: <strong>{{ response.best_movie.title }}</strong></p>
+        <p>Overview: {{ response.best_movie.overview }}</p>
+        <p>Votes Average: {{ response.best_movie.vote_average }}</p>
+        <p>Votes Number: {{ response.best_movie.vote_count }}</p>
+        <p>For Adults: {{ response.best_movie.adult }}</p>
+        
+    {% else %}
+        <p>No movies found.</p>
+    {% endif %}
+    
+    <h2>Statistics:</h2>
+    <p>Average Rating of All Movies: {{ response.avg_rating }}</p>
+    <p>Most Common Language: {{ response.common_language }}</p>
+    <p>Average Runtime: {{ response.avg_runtime }} minutes</p>
+    <p>Average Revenue: {{ response.avg_revenue }}</p>
+
+    <img src="data:image/png;base64,{{ response.plot }}" alt="Wykres gatunków" />
+
+    <h2>Movie List: </h2>
+    <ul>
+        {% for movie in response.movies %}
+            <li>
+                <h2><a href="/movies/{{ movie.id }}/view">{{ movie.title }}</a></h2>
+                <p>{{ movie.overview }}</p>
+                <p>Release Date: {{ movie.release_date }}</p>
+                <p>Rating: {{ movie.vote_average }}</p>
+            </li>
+        {% else %}
+            <li>No results found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
