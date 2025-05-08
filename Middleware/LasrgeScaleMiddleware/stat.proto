@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package stat;
+
+service StatService {
+  rpc Average (AverageRequest) returns (AverageResponse);
+  rpc Median (MedianRequest) returns (MedianResponse);
+}
+
+message AverageRequest {
+  repeated double numbers = 1;
+}
+
+message AverageResponse {
+  double result = 1;
+}
+
+message MedianRequest {
+  repeated double numbers = 1;
+}
+
+message MedianResponse {
+  double result = 1;
+}
