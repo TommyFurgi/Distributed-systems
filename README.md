@@ -8,11 +8,14 @@ The repository includes code samples, project solutions, and practical exercises
 
 ## Covered topics
 
-- [Sockets](/Sockets/) - Communication using TCP and UDP
-- [REST](/FastAPI/) - Building RESTful APIs using FastAPI
-
+- [Sockets](/Sockets/) – Communication using TCP and UDP
+- [REST](/FastAPI/) – Building RESTful APIs using FastAPI
+- [Middleware](/Middleware/)
+  - [Smart Home](/Middleware/SmartHome) – Implementation of a middleware for managing smart home devices
+  - [Large Scale System](/Middleware/LargeScaleMiddleware) – Implementation of a scalable middleware infrastructure
+- [Ray](/Ray/) – Parallel and distributed computing
 
 ## Technologies
 
-- **Programming Language:** Java, Python
-- **Frameworks & Libraries:** FastAPI
+- **Programming Languages:** Java, Python
+- **Frameworks & Libraries:** FastAPI, gRPC, ZeroC Ice, Ray
