@@ -1,0 +1,2 @@
+slice2java --output-dir .\server-java\generated .\Home.ice
+slice2py --output-dir .\client-python\generated .\Home.ice
