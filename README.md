@@ -14,8 +14,10 @@ The repository includes code samples, project solutions, and practical exercises
   - [Smart Home](/Middleware/SmartHome) – Implementation of a middleware for managing smart home devices
   - [Large Scale System](/Middleware/LargeScaleMiddleware) – Implementation of a scalable middleware infrastructure
 - [Ray](/Ray/) – Parallel and distributed computing
+- [RabbitMQ](/RabbitMQ/) – Message brokering and asynchronous communication
+- [ZooKeeper](/ZooKeeper/) – Coordination service for distributed systems
 
 ## Technologies
 
 - **Programming Languages:** Java, Python
-- **Frameworks & Libraries:** FastAPI, gRPC, ZeroC Ice, Ray
+- **Frameworks & Libraries:** FastAPI, gRPC, ZeroC Ice, Ray, RabbitMQ, ZooKeeper
